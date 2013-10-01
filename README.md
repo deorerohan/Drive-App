@@ -10,5 +10,3 @@ User can add custom playlists to keep certain media together.
 
 While closing application all collected data is written in a file using XML format so that user can see same files in same playlists.
 
-
-Test changes so as to test push too.
