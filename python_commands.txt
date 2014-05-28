@@ -1,2 +1,123 @@
-This file will contain all commands for future reference.
+
+For resizing for size of console.
+
+sudo dpkg-reconfigure console-setup
+sudo reboot
+
+
+to keep raspberry pi up to date
+sudo apt-get update && sudo apt-get upgrade
+
+
+installing transmission
+
+
+http://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&sqi=2&ved=0CCsQtwIwAA&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DqHBf6XhXdAI&ei=siVVUqjLA8bprQfc1YGIBg&usg=AFQjCNEwhZppEFpeUQR1Zce2ES-C_nGkKg&sig2=4XfNlZolburxvUcdfETSRw&bvm=bv.53760139,d.bmk
+
+
+
+http://www.computeristas.com/wp/?p=98
+
+https://torcache.net/torrent/A208BA2B601EDD861E9A8B4EC90FA97E98B86B09.torrent
+
+sudo apt-get install transmission-daemon
+enter as root user/
+go to /etc/tramsmission-daemon folder
+cd tramsmission-daemon
+service transmission-daemon stop
+nano settings.json
+
+modify file
+save
+service transmission-daemon start
+
+access from any browser with http://10.42.0.67:9091
+
+for granting all rights to folder
+chmod 770 /home/pi/incomplete
+
+Then, add your user account to the group debian-transmission. (I.m using my account name, pi, in this example.) Now your user account and the debian-transmission user account are in the same group.
+sudo usermod -a -G debian-transmission pi
+
+Next, change the group ownership of the folders Transmission will use to debian-transmission (the group, not the user).
+$ chgrp debian-transmission /home/pi/incomplete
+
+
+$ sudo nano /etc/transmission-daemon/settings.json
+
+file should look like this
+
+{
+    "alt-speed-down": 50,
+    "alt-speed-enabled": false,
+    "alt-speed-time-begin": 540,
+    "alt-speed-time-day": 127,
+    "alt-speed-time-enabled": false,
+    "alt-speed-time-end": 1020,
+    "alt-speed-up": 50,
+    "bind-address-ipv4": "0.0.0.0",
+    "bind-address-ipv6": "::",
+    "blocklist-enabled": false,
+    "blocklist-url": "http://www.example.com/blocklist",
+    "cache-size-mb": 4,
+    "dht-enabled": true,
+    "download-dir": "/home/pi/disk1/complete",
+    "download-limit": 100,
+    "download-limit-enabled": 0,
+    "download-queue-enabled": true,
+    "download-queue-size": 5,
+    "encryption": 1,
+    "idle-seeding-limit": 30,
+    "idle-seeding-limit-enabled": false,
+    "incomplete-dir": "/home/pi/disk1/incomplete",
+    "incomplete-dir-enabled": true,
+    "lpd-enabled": false,
+    "max-peers-global": 200,
+    "message-level": 2,
+    "peer-congestion-algorithm": "",
+    "peer-limit-global": 100,
+    "peer-limit-per-torrent": 30,
+    "peer-port": 51413,
+    "peer-port-random-high": 65535,
+    "peer-port-random-low": 49152,
+    "peer-port-random-on-start": false,
+    "peer-socket-tos": "default",
+    "pex-enabled": true,
+    "port-forwarding-enabled": false,
+    "preallocation": 1,
+    "prefetch-enabled": 1,
+    "queue-stalled-enabled": true,
+    "queue-stalled-minutes": 30,
+    "ratio-limit": 2,
+    "ratio-limit-enabled": false,
+    "rename-partial-files": true,
+    "rpc-authentication-required": true,
+    "rpc-bind-address": "0.0.0.0",
+    "rpc-enabled": true,
+    "rpc-password": "myPassword",
+    "rpc-port": 8888,
+    "rpc-url": "/transmission/",
+    "rpc-username": "transmission",
+    "rpc-whitelist": "127.0.0.1",
+    "rpc-whitelist-enabled": false,
+    "scrape-paused-torrents-enabled": true,
+    "script-torrent-done-enabled": false,
+    "script-torrent-done-filename": "",
+    "seed-queue-enabled": false,
+    "seed-queue-size": 10,
+    "speed-limit-down": 100,
+    "speed-limit-down-enabled": false,
+    "speed-limit-up": 100,
+    "speed-limit-up-enabled": false,
+    "start-added-torrents": true,
+    "trash-original-torrent-files": false,
+    "umask": 18,
+    "upload-limit": 100,
+    "upload-limit-enabled": 0,
+    "upload-slots-per-torrent": 14,
+    "utp-enabled": true,
+    "watch-dir": "/home/pi/disk1/watch",
+    "watch-dir-enabled": true
+}
+
 
