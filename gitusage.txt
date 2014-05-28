@@ -1,3 +1,8 @@
+git add <filename>
+git commit -m 'your message'
+git push
+
+
 Set up git
 
 git config --global user.name "Your Name Here"
