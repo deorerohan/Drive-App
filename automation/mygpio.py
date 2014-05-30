@@ -6,9 +6,9 @@ def start():
 
 def setuppin(pin, isout):
 	if isout:
-		GPIO.setout(pin, GPIO.OUT)
+		GPIO.setup(pin, GPIO.OUT)
 	else:
-		GPIO.setout(pin, GPIO.IN)
+		GPIO.setup(pin, GPIO.IN)
 
 def toggleswitch(pin):
 	GPIO.output(pin, True)
