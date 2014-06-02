@@ -1,5 +1,8 @@
 # actual code for controlling GPIO's for RPi will be
 # written here
+
+"""library for connecting to gpio"""
+
 import RPi.GPIO as GPIO
 def start():
 	GPIO.setmode(GPIO.BOARD)
