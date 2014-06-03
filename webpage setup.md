@@ -19,3 +19,18 @@ for linux and unix
 
 for windows
 
+to create webpages
+
+create *.html page in /var/www directory to make it accessible
+
+run command
+sudo chmod a+r /var/www/*.html
+
+to access that page put following address in your browser
+
+http://ipaddress/*.html
+
+
+
+use ifconfig for finding ip address of your machine
+
