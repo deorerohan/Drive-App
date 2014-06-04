@@ -22,8 +22,17 @@ if var1 not in form:
 else:
     text=form[var1].value
     print "<h1>The check box was ticked:</h1>" 
-    print text
-
+	
+	#print "<form action=\"/cgi-bin/examples/checkbox.py\" method=\"POST\">"
     devices=test.getdevices()
     for item in devices:
 		test.addcheckbox(item)
+	print "<input type=\"submit\" value=\"Submit\" name=\"submit\">"  
+	#print "</form>"
+	
+	
+	
+if request.POST.get('submit'):
+	print "Submit was pressed"
+else :
+	print "Submit was not pressed"
