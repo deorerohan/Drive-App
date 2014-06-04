@@ -23,11 +23,11 @@ else:
     text=form[var1].value
     print "<h1>The check box was ticked:</h1>" 
 	
-	#print "<form action=\"/cgi-bin/examples/checkbox.py\" method=\"POST\">"
+#print "<form action=\"/cgi-bin/examples/checkbox.py\" method=\"POST\">"
     devices=test.getdevices()
     for item in devices:
 		test.addcheckbox(item)
-	print "<input type=\"submit\" value=\"Submit\" name=\"submit\">"  
+    print "<input type=\"submit\" value=\"Submit\" name=\"submit\">"  
 	#print "</form>"
 	
 	
