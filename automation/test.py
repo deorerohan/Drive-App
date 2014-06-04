@@ -11,5 +11,9 @@ def getdevices():
 	return devices.keys()
 
 	
-def addcheckbox(name):
-    print "<input type=\"checkbox\" value=\""+name+"\" value=\"set\">" +name+ "<br>"
+def addcheckbox(name, ischecked):
+    if ischecked:
+        print "<input type=\"checkbox\" name=\""+name+"\" value=\"set\" checked>" +name+ "<br>"
+    else:
+         print "<input type=\"checkbox\" name=\""+name+"\" value=\"set\">" +name+ "<br>"
+        
