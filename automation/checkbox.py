@@ -26,8 +26,4 @@ else:
 
     devices=test.getdevices()
     for item in devices:
-		addcheckbox(item)
-
-
-def addcheckbox(name):
-    print "<input type=\"checkbox\" value=\""+name+"\" value=\"set\">" +name+ "<br>"
+		test.addcheckbox(item)
