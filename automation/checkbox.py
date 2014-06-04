@@ -25,8 +25,9 @@ else:
     print text
 
     devices=test.getdevices()
-    print "<input type=\"submit\" value=\""+devices[0]+"\"><br><input type=\"submit\" value=\"", devices[1]+"\">"
+    for item in devices:
+		addcheckbox(item)
 
 
 def addcheckbox(name):
-    print "<input type=\"checkbox\" value=\""+name+"\""
+    print "<input type=\"checkbox\" value=\""+name+"\" value=\"set\">" +name+ "<br>"
