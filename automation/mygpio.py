@@ -13,8 +13,8 @@ def setuppin(pin, isout):
 	else:
 		GPIO.setup(pin, GPIO.IN)
 
-def toggleswitch(pin):
-	GPIO.output(pin, True)
+def toggleswitch(pin, status):
+	GPIO.output(pin, status)
 
 
 def stop():
