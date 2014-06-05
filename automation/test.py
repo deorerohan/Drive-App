@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import mygpio
 
 d1 = "device 1"
@@ -10,15 +11,18 @@ def returntext():
 	return "this is my test"
 
 def getdevices():
-	if InitGPIO == False:
-		InitGPIO = True
-		mygpio.start()
-		for dev in devices:
-			mygpio.setuppin(devices.value, True)
+#	global IninGPIO
+	global devices
+#	if InitGPIO == False:
+	InitGPIO = True
+	mygpio.start()
+	for dev in devices.keys():
+		mygpio.setuppin(devices[dev], True)
 	return devices.keys()
 
 	
 def addcheckbox(name, ischecked):
+    global devices
     if ischecked:
 	mygpio.toggleswitch(devices[name], True)
         print "<input type=\"checkbox\" name=\""+name+"\" value=\"set\" checked>" +name+ "<br>"
